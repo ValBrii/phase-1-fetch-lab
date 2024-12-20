@@ -1,14 +1,14 @@
 function fetchBooks() {
   // To pass the tests, don't forget to return your fetch!
-  return fetch('https://anapioficeandfire.com/api/books') // Ensure fetch is returned
+  return fetch('https://anapioficeandfire.com/api/books') 
       .then(response => {
           if (!response.ok) {
               throw new Error(`HTTP error! Status: ${response.status}`);
           }
-          return response.json(); // Convert the response to JSON
+          return response.json(); 
       })
       .then(data => {
-          renderBooks(data); // Pass the JSON data to renderBooks()
+          renderBooks(data); 
       })
       .catch(error => {
           console.error('Error fetching books:', error);
@@ -27,4 +27,3 @@ function renderBooks(books) {
 document.addEventListener('DOMContentLoaded', function() {
   fetchBooks();
 });
-
